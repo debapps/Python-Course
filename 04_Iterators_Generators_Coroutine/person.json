@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Arijit Singh",
+        "city": "Kolkata",
+        "state": "WB"
+    },
+    {
+        "name": "Iman chakrabarty",
+        "city": "Howrah",
+        "state": "WB"
+    },
+    {
+        "name": "Anupam Roy",
+        "city": "New Town",
+        "state": "WB"
+    },
+    {
+        "name": "Sheya Ghosal",
+        "city": "Jaipur",
+        "state": "RJ"
+    },
+    {
+        "name": "Sonu Nigam",
+        "city": "Mumbai",
+        "state": "MH"
+    },
+    {
+        "name": "Kishor Kumar",
+        "city": "Pune",
+        "state": "MH"
+    },
+    {
+        "name": "A. R. Rahman",
+        "city": "Chennai",
+        "state": "TN"
+    },
+    {
+        "name": "Hariharan",
+        "city": "Chennai",
+        "state": "TN"
+    },
+    {
+        "name": "Kumar Sanu",
+        "city": "Kolkata",
+        "state": "WB"
+    }
+]

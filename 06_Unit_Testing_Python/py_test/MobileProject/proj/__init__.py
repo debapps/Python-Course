@@ -1,0 +1,1 @@
+all = ['mobile_inv']
