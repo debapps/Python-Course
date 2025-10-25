@@ -22,7 +22,9 @@ This repository is a comprehensive python course from basic to advance level. Th
 
 -   **06_Unit_Testing_Python**: This contains python unit testing modules: _doctest, unittest, pytest and nosetest_.
 
--   **07_NumPy**: This contains complete tutorial of NumPy in Python.
+-   **07_NumPy**: This contains complete tutorial of NumPy in Python, used for scientific calculations.
+
+-   **08_Pandas**: This contains complete tutorial of Pandas in Python, used for Data Analysis.
 
 ## Tutorials
 
