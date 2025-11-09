@@ -26,6 +26,8 @@ This repository is a comprehensive python course from basic to advance level. Th
 
 -   **08_Pandas**: This contains complete tutorial of Pandas in Python, used for Data Analysis.
 
+-   **09_Matplotlib**: This cotains complete tutorial of Matplotlib library in Python. It is used for Data Visualization.
+
 ## Tutorials
 
 for more comprehensive tutorial, please visit the website - https://fizzbuzzblog.vercel.app/
