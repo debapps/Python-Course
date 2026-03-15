@@ -1,7 +1,7 @@
 # This program uses a Coroutine to find error in application log file using pattern matching.
 
 # Coroutine Decorator.
-def couroutines(func):
+def coroutines(func):
     def wrapper(*args, **kwargs):
         c = func(*args, **kwargs)
         next(c)
@@ -9,7 +9,7 @@ def couroutines(func):
     
     return wrapper
 
-@couroutines
+@coroutines
 def text_pattern(pattern):
     try:
         while True:
@@ -17,15 +17,18 @@ def text_pattern(pattern):
             if pattern in text:
                 print(f'{pattern} Match Found - {text}')
     except GeneratorExit:
-        print('Coroutine Closed.')
+        print(f'{pattern} Seracher Coroutine Closed.')
 
 if __name__ == '__main__':
     print('\n-------- Find ERROR using Coroutine --------')
 
-    searcher = text_pattern('ERROR')
+    error_srch = text_pattern('ERROR')
+    debug_srch = text_pattern('DEBUG')
 
     with open('app.log', 'r') as log_file:
         for line in log_file:
-            searcher.send(line.strip())
+            error_srch.send(line.strip())
+            debug_srch.send(line.strip())
 
-    searcher.close()
+    error_srch.close()
+    debug_srch.close()

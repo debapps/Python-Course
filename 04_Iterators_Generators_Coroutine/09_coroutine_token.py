@@ -26,7 +26,7 @@ if __name__ == '__main__':
     token.send('Debaditya')
     token.send('Anuradha')
     token.send('Anurag')
-    token.send('Tania')
+    token.send('Moon')
 
     # close the coroutine.
     token.close()

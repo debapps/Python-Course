@@ -37,7 +37,7 @@ for team in all_teams:
 digit_list = list(range(1, 5))
 all_permutations = itertools.permutations(digit_list, 3)
 
-print(f'\n\nGenerating all possible permutations of {digit_list} to fill 4 places.')
+print(f'\n\nGenerating all possible permutations of {digit_list} to fill 3 places.')
 for item in all_permutations:
     print(item, end=' ')
 

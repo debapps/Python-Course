@@ -5,13 +5,16 @@
 
 class EvenNumberList:
     def __init__(self, numbers):
+        print('__init__')
         self._numbers = numbers
         self._idx = 0
 
     def __iter__(self):
+        print('__iter__')
         return self
     
     def __next__(self):
+        print('__next__')
         while self._idx < len(self._numbers):
             current_num = self._numbers[self._idx]
             self._idx += 1

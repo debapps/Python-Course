@@ -17,7 +17,7 @@ content = [
     'Line 5: The greatest happiness you can have is knowing that you do not need any - William Saroyan',
     'Line 6: Relationships are like a dance, with a little give and take, and a lot of trust - Unknown',
     'Line 7: A great relationship is about two things: First, appreciating the similarities, and second, respecting the differences - Unknown',
-    'Line 8: ove is a two-way street constantly under construction - Carroll Bryant',
+    'Line 8: Love is a two-way street constantly under construction - Carroll Bryant',
     'Line 9: Don\'t walk in front of me… I may not follow. Don\'t walk behind me… I may not lead. Walk beside me… and just be my friend - Albert Camus',
     'Line 10: The real test of a relationship is how you handle disagreements - Unknown',
 ]

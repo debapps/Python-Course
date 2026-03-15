@@ -1,7 +1,7 @@
 # We can write coroutine decorator to create coroutines.
 
 # Coroutine Decorator.
-def couroutines(func):
+def coroutines(func):
     def wrapper(*args, **kwargs):
         c = func(*args, **kwargs)
         next(c)
@@ -11,7 +11,7 @@ def couroutines(func):
 
 # The coroutine generates token numbers for input data.
 
-@couroutines
+@coroutines
 def token_issuer(token_id = 0):
     try:
         while True:
