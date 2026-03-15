@@ -1,4 +1,9 @@
 # Lambda Function: Anonymous Functions with one return expression.
+# Lambda functions are also known as anonymous functions because they do not have a name. 
+# They are defined using the lambda keyword and can take any number of arguments but 
+# can only have one expression. 
+# The expression is evaluated and returned when the function is called.
+# lambda parameters : expression
 
 # Lambda function to add two numbers.
 add = lambda x, y: x + y
