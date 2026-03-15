@@ -24,9 +24,9 @@ This repository is a comprehensive python course from basic to advance level. Th
 
 -  **07_OOP_Advance**: This contains python OOP advance concepts.
 
--  **08_Iterators_Generators_Coroutine**: This contains all about iterators, generators and coroutines in python.
+-  **08_Context_Manager**: This contains python context manager concept.
 
--  **09_Context_Manager**: This contains python context manager concept.
+-  **09_Iterators_Generators_Coroutine**: This contains all about iterators, generators and coroutines in python.
 
 -  **10_Unit_Testing_Python**: This contains python unit testing modules: _doctest, unittest, pytest and nosetest_.
 
