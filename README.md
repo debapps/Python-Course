@@ -30,14 +30,6 @@ This repository is a comprehensive python course from basic to advance level. Th
 
 - **10_Unit_Testing_Python**: This contains python unit testing modules: _doctest, unittest, pytest and nosetest_.
 
-- **11_NumPy**: This contains complete tutorial of NumPy in Python, used for scientific calculations.
-
-- **12_Pandas**: This contains complete tutorial of Pandas in Python, used for Data Analysis.
-
-- **13_Matplotlib**: This cotains complete tutorial of Matplotlib library in Python. It is used for Data Visualization.
-
-- **14_Statistics_in_Python**: This contains Python codes related to Statistical applications.
-
 - **QuizProg**: This contains code snippets in different python quizes.
 
 ## Tutorials
