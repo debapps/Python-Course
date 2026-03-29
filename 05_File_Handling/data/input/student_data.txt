@@ -1,0 +1,11 @@
+John	Smith	5
+Anna	Boleyn	4.5
+John	Smith	2
+Anna	Boleyn	11
+Andrew	Cox	    1.5
+Yulia	Brown	5.5
+Andrew,Cox,3.4
+John	Smith	3
+Yulia	Brown	2.5
+Anna	Boleyn	4.5
+Andrew  Cox     4.5
