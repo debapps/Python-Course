@@ -229,6 +229,87 @@ except Exception:
 except:
     print('c')
 
+# Quiz 20.
+print('\nQuiz 20:')
 str1 = 'string'
 str2 = str1[:]
 print(str1 is str2)
+
+# Quiz 21.
+print('\nQuiz 21:')
+d = {}
+d['2'] = [1, 2]
+d['1'] = [3, 4]
+
+for x in d.keys():
+    print(d[x][1], end='')
+
+# Quiz 22.
+print('\nQuiz 22:')
+x = """
+"""
+print(len(x))
+
+# Quiz 23.
+print('\nQuiz 23:')
+def fun(x):
+    return 1 if x % 2 != 0 else 2
+
+print(fun(fun(1)))
+
+# Quiz 24.
+print('\nQuiz 24:')
+def fun(d, k ,v):
+    d[k] = v
+
+dc = {}
+print(fun(dc, '1', 'v'))
+
+# Quiz 25.
+print('\nQuiz 25:')
+d = {'one': 1, 'three': 3, 'two': 2}
+for k in sorted(d.values()):
+    print(k, end=' ')
+
+# Quiz 26.
+print('\nQuiz 26:')
+
+v = 1 + 1 // 2 + 1 / 2 + 2
+print(v)
+
+# Quiz 27.
+print('\nQuiz 27:')
+z = 2
+y = 1
+x = y < z or z > y and y > z or z < y
+print(x)
+
+# Quiz 28.
+print('\nQuiz 28:')
+t = (1, 2, 3, 4)
+t = t[-2:-1]
+t = t[-1]
+print(t)
+
+# Quiz 29.
+print('\nQuiz 29:')
+def I(n):
+    s = ''
+    for i in range(n):
+        s += '*'
+        yield s
+
+for x in I(3):
+    print(x, end='')
+
+# Quiz 30.
+print('\nQuiz 30:')
+ls = [[c for c in range(r)] for r in range(3)]  
+
+for x in ls:
+    if len(x) < 2:
+        print('_')
+
+# Quiz 31.
+print('\nQuiz 31:')
+

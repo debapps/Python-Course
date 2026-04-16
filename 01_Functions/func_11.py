@@ -1,32 +1,24 @@
-# Generators: Generators in Python are special type of functions that allow you to 
-# create an iterable sequence of values.
+# map(), filter(), reduce() functions: Higher order function examples.
 
-from random import randint
+import random
+from functools import reduce
 
-# Generators are created using `yeild` keywords.
-def random_number_generator(n):
-    for num in range(n):
-        yield randint(1, 50)
+# Get the initial list of 10 numbers.
+numbers = [random.randint(1, 50) for _ in range(10)]
+print(f'Initial list of numbers: {numbers}')
 
-rand_gen = random_number_generator(5)
-print(f'Generator Object Created - {rand_gen}\nType - {type(rand_gen)}')
-print('\nRandom numbers')
-print(next(rand_gen))
-print(next(rand_gen))
-print(next(rand_gen))
-print(next(rand_gen))
-print(next(rand_gen))
+# The map() function: maps each elements in the list to a function.
+square_numbers = list(map(lambda x: pow(x, 2), numbers))
+print(f'Squared numbers list: {square_numbers}')
 
-try:
-    print(next(rand_gen))
-except StopIteration as e:
-    print(f'{rand_gen} is exhausted. Raised exception {e}')
+# The filter() function: filters elements based on some condition.
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(f'List of even numbers: {even_numbers}')
 
-#  Generator defined with comprehension.
-even_num = (num for num in range(11) if num % 2 == 0)
-print('\nEven Number:')
-for num in even_num:
-    print(num)
+# The reduce() function: reduces elements of a list into a single value 
+# based on the function argument.
+numbers_total = reduce(lambda x, y: x + y, numbers)
+print(f'The sum of the numbers: {numbers_total}')
 
-
-
+min_number = reduce(lambda x, y: x if (x < y) else y, numbers)
+print(f'The smallest number: {min_number}')

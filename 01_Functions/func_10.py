@@ -1,25 +1,42 @@
-# Decorator Function: takes another function as an argument, adds some functionality, 
-# and returns another function. 
+# Higher Order Functions: A function that meets one or both of the following criteria.
+# - Takes a function as an argument.
+# - Returns a function as it result.
 
-import time
+# A function that takes another function as an argument.
+def apply_ops(items, op_func):
+    '''A higher order function that apply op_func to each element of items.'''
+    results = [op_func(item) for item in items]
+    return results
 
-def timer_decoratior(func):
-    def timer_wrapper(*args, **kwargs):
-        start_time = time.time()
-        print(f'\nProcessing start at: {start_time}')
-        func(*args, **kwargs)
-        end_time = time.time()
-        print(f'\nProcessing start at: {end_time}')
-        print(f'Time taken: {round(end_time - start_time, 4)}\n')
+def add_one(x):
+    '''Adds one to its parameter x.'''
+    return x + 1
 
-    return timer_wrapper
+numbers = [2, 5, 6, 4, 1]
+added_numbers = apply_ops(numbers, add_one)
+print(f'\nNumbers applying add one: {added_numbers}')
 
-@timer_decoratior
-def delay_processing(n):
-    '''This Function introduce some delay.'''
-    for _ in range(n):
-        sum([idx*idx for idx in range(100000)])
+def make_upper(name):
+    '''Returns the upper-case.'''
+    return name.upper()
+
+names = ['bittu', 'anurag', 'anuradha', 'montu', 'rumpa']
+print(f'\nNames in upper-case: {apply_ops(names, make_upper)}')
+
+# A function that returns another function.
+def multiplier(n):
+    '''This function returns a functions that multiply n with its parameter.'''
+
+    def times(x):
+        return x * n
+    
+    return times
+
+five_times = multiplier(5)
+print(f'\nThe 5 times of 15 is: {five_times(15)}')
+
+three_times = multiplier(3)
+print(f'\nThe 3 times of 20 is: {three_times(20)}')
 
     
 
-delay_processing(10)

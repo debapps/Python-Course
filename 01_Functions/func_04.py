@@ -1,21 +1,12 @@
-# This program demonstates the local and global scopes.
+# Extended function definition with *args and **kwargs.
+# *args – refers to a tuple of all additional, not explicitly expected positional arguments.
+# **kwargs (keyword arguments) – refers to a dictionary of all unexpected arguments that were passed in the form of keyword=value pairs. 
 
-# This is a global variable
-global_message = "I am a global message."
+def combiner(a, b, *args, **kwargs):
+    print(a, type(a))
+    print(b, type(b))
+    print(args, type(args))
+    print(kwargs, type(kwargs))
 
-def demonstrate_scope():
- # This is a local variable
- local_message = "I am a local message."
- print(f"Inside the function: {local_message}")
- print(f"Inside the function: {global_message}")
 
-demonstrate_scope()
-
-# This will work because global_message is in the global scope
-print(f"Outside the function: {global_message}")
-
-# This will cause an error because local_message is not in the global scope
-try:
- print(f"Outside the function: {local_message}")
-except NameError as e:
- print(f"\nCaught an error: {e}")
+combiner(10, '20', 40, 60, 30, argument1=50, argument2='66')

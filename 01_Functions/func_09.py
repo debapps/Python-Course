@@ -1,24 +1,20 @@
-# map(), filter(), reduce() functions: Higher order function examples.
+# Lambda Function: Anonymous Functions with one return expression.
+# Lambda functions are also known as anonymous functions because they do not have a name. 
+# They are defined using the lambda keyword and can take any number of arguments but 
+# can only have one expression. 
+# The expression is evaluated and returned when the function is called.
+# lambda parameters : expression
 
-import random
-from functools import reduce
+# Lambda function to add two numbers.
+add = lambda x, y: x + y
 
-# Get the initial list of 10 numbers.
-numbers = [random.randint(1, 50) for _ in range(10)]
-print(f'Initial list of numbers: {numbers}')
+print(f'The sum of 10 and 23 is: {add(10, 23)}')
 
-# The map() function: maps each elements in the list to a function.
-square_numbers = list(map(lambda x: pow(x, 2), numbers))
-print(f'Squared numbers list: {square_numbers}')
+# Lambda functions are often used as an argument to other functions.
+students = [('Anuradha', 55), ('Susmita', 34), ('Tania', 23)]
 
-# The filter() function: filters elements based on some condition.
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
-print(f'List of even numbers: {even_numbers}')
+# Sort the students based on id.
+sorted_students = sorted(students, key=lambda students: students[1])
 
-# The reduce() function: reduces elements of a list into a single value 
-# based on the function argument.
-numbers_total = reduce(lambda x, y: x + y, numbers)
-print(f'The sum of the numbers: {numbers_total}')
-
-min_number = reduce(lambda x, y: x if (x < y) else y, numbers)
-print(f'The smallest number: {min_number}')
+print(f'Student List: {students}')
+print(f'Sorted Student List: {sorted_students}')

@@ -1,20 +1,21 @@
-def add_to_list_bad_practice(item, my_list=[]):
-    my_list.append(item)
-    return my_list
+# This program demonstates the local and global scopes.
 
-def add_to_list_good_practice(item, my_list=None):
-    if my_list is None:
-        my_list = []
-    
-    my_list.append(item)
-    return my_list
+# This is a global variable
+global_message = "I am a global message."
 
-print(add_to_list_bad_practice('apple'))
-print(add_to_list_bad_practice('banana'))
+def demonstrate_scope():
+ # This is a local variable
+ local_message = "I am a local message."
+ print(f"Inside the function: {local_message}")
+ print(f"Inside the function: {global_message}")
 
-print(add_to_list_good_practice('apple'))
-print(add_to_list_good_practice('banana'))
+demonstrate_scope()
 
-fruits = []
-print(add_to_list_good_practice('apple', fruits))
-print(add_to_list_good_practice('kiwi', fruits))
+# This will work because global_message is in the global scope
+print(f"Outside the function: {global_message}")
+
+# This will cause an error because local_message is not in the global scope
+try:
+ print(f"Outside the function: {local_message}")
+except NameError as e:
+ print(f"\nCaught an error: {e}")

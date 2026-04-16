@@ -1,19 +1,15 @@
-# Docstring
+# forwarding arguments to other functions.
+def combiner(a, b, *args, **kwargs):
+    super_combiner(*args, **kwargs)
+    
+    # If you remove the * and **, the function will receive the arguments 
+    # as a tuple and a dictionary, respectively, 
+    # instead of unpacking them into individual arguments. 
+    
+    # super_combiner(args, kwargs)
 
-def calculate_area(length, width):
- """
- Calculates the area of a rectangle.
+def super_combiner(*my_args, **my_kwargs):
+    print('my_args:', my_args)
+    print('my_kwargs', my_kwargs)
 
- Args:
- length (int): The length of the rectangle.
- width (int): The width of the rectangle.
-
- Returns:
- int: The calculated area of the rectangle.
- """
- # Multiply length and width to find the area
- area = length * width
- return area
-
-# You can access the docstring using the __doc__ attribute
-print(calculate_area.__doc__)
+combiner(10, '20', 40, 60, 30, argument1=50, argument2='66')
